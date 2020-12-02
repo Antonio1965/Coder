@@ -1,11 +1,19 @@
-
 import './App.css';
+
+import  NavBar  from './global/NavBar';
+import  Main  from './global/Main';
+import  Footer  from './global/Footer';
+
 
 function App() {
   return (
+    <>
     <div className="App">
-     <h1>Mi proyecto E-commerce</h1>
+    <NavBar/>
+    <Main/>
+    <Footer/>
     </div>
+    </>
   );
 }
 
