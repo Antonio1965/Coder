@@ -1,0 +1,7 @@
+.carro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  font-size: xx-large;
+}

@@ -1,17 +1,18 @@
-import './App.css';
+import './reset.css';
 
-import  NavBar  from './global/NavBar';
-import  Main  from './global/Main';
-import  Footer  from './global/Footer';
-
+import  NavBar  from './components/global/NavBar';
+import  Main  from './components/homes/Main';
+import  Footer  from './components/global/Footer';
+import ListProducts from './components/productos/ListProducts';
 
 function App() {
   return (
     <>
     <div className="App">
     <NavBar/>
-    <Main/>
+    <ListProducts/>
     <Footer/>
+   
     </div>
     </>
   );
