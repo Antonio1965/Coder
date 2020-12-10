@@ -1,9 +1,9 @@
 import './Footer.css';
 
-function Footer () {
+function Footer ({pieDePagina}) {
     return (
 		<div className="main-footer">
-		<h3>Copyright © 2020-2021 TecnoAdult S.R.L.</h3>
+		<h3>{pieDePagina}</h3>
 	</div>	
     )
 }

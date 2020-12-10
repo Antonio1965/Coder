@@ -1,29 +1,20 @@
 import './reset.css';
 
 import  NavBar  from './components/global/NavBar';
-import  Main  from './components/homes/Main';
+//import  Main  from './components/homes/Main';
 import  Footer  from './components/global/Footer';
-import ListProducts from '../src/components/productos/ListProducts';;
+import ListProduct from './components/productos/ListProduct';;
 
 function App() {
   return (
     <>
     <div className="App">
     <NavBar/>
-    <ListProducts tipo='Tipo de Producto'
-    lista=
-    {[
-      'imagen1',
-      'imagen2',
-      'imagen3',
-      'imagen4',
-      'imagen5',
-      'imagen6',
-      'imagen7',
-      
-    ]}
-    />
-    <Footer/>
+    <ListProduct titulo='Producto 1' descripcion='Celulares X' precio='3000'/>
+    <ListProduct titulo='Producto 2' descripcion='Celulares Y' precio='4000'/>
+    <ListProduct titulo='Producto 3' descripcion='Celulares Z' precio='5000'/> 
+   
+    <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
    
     </div>
     </>
