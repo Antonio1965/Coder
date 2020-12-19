@@ -22,10 +22,4 @@ function App() {
       <NavAndWidgetCart />
       {sectionToShow('Category')}
       <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
-    
-
-    </>
-  );
-}
-
 export default App;
