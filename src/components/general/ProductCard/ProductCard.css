@@ -32,3 +32,35 @@
   font-size: 1.6rem;
   font-weight: 600;
 }
+.productCard div .qty {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+}
+
+.productCard div .qty button {
+  width: 20%;
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  background: var(--color-principal);
+  border-radius: 1rem;
+  color: var(--blanco);
+  font-size: 1.5rem;
+}
+
+.productCard div .qty button:disabled {
+  background: #ddd;
+  cursor: no-drop;
+}
+
+.productCard div .qty input {
+  width: 60%;
+  text-align: center;
+  border: none;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  outline: none;
+}

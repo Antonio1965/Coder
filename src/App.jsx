@@ -1,25 +1,26 @@
-import {useEffect, useState} from 'react';
+
 import './reset.css';
 import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
-import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
+//import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
+import Home from './components/Home';
+import Category from './components/Category';
 import Footer from './components/general/Nav/Footer';
-
+//import Main from './components/Home/Main';
 
 
 function App() {
-  const [nombre, setNombre] = useState('');
-
-  useEffect(() => {
-    console.log('Hola mundo');
-  }, [nombre])
+  const sectionToShow = (section) => {
+    switch(section) {
+      case 'Home': return <Home/>;
+      case 'Category': return <Category/>;
+      default: return <Home/>
+    }
+  }
 
   return (
     <>
       <NavAndWidgetCart />
-      <FeaturedProducts />
-      
-      <button onClick={() => setNombre('Fede')}>Cambiar nombre</button>
-      
+      {sectionToShow('Category')}
       <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
     
 

@@ -13,7 +13,7 @@ const NavAndWidgetCart = () => {
     return (
         <>
             <Nav titulo="TecnoAdult" action={openWidgetCart} />
-            <WidgetCart show={showWidgetCart} />
+            <WidgetCart show={showWidgetCart} action={openWidgetCart}/>
            
         </>
     )
