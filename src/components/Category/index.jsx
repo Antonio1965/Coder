@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import './index.css';
 
 const Category = () => {
     const [people, setPeople] = useState([]);
@@ -20,6 +21,7 @@ const Category = () => {
 
     return (
         <>
+            <div className='category'>
             <h1>Star Wars info</h1>
             {
                 people.length ?
@@ -39,6 +41,7 @@ const Category = () => {
                 )) :
                 <p>Cargando personajes...</p>
             }
+            </div>
         </>
     )
 }
