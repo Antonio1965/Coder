@@ -1,46 +1,18 @@
-import {useState, useEffect} from 'react';
-import axios from 'axios';
-import './index.css';
+import {useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 
 const Category = () => {
-    const [people, setPeople] = useState([]);
-
-    const getPeople = async () => {
-        try {
-            let response = await axios('https://swapi.dev/api/people/');
-
-            setPeople(response.data.results);
-        } catch(err) {
-            console.log(err);
-        }
-    }
+    const {category_name} = useParams();
 
     useEffect(() => {
-        getPeople();
-    }, [])
+        console.log(category_name);
+    }, [category_name])
 
     return (
         <>
-            <div className='category'>
-            <h1>Star Wars info</h1>
-            {
-                people.length ?
-                people.map(person => (
-                    <article key={person.created}>
-                        <h2>{person.name}</h2>
-                        <p>Altura: {person.height}</p>
-                        {
-                            !!person.starships.length &&
-                            <ul>
-                                {
-                                    person.starships.map((nave, index) => <li key={index}>{nave}</li>)
-                                }
-                            </ul>
-                        }
-                    </article>
-                )) :
-                <p>Cargando personajes...</p>
-            }
+            <div className='container'>
+            <h1>{category_name}</h1>
+            
             </div>
         </>
     )

@@ -1,7 +1,10 @@
 import {useEffect, useState} from 'react';
 import ProductDetail from './ProductDetail';
+import { useParams } from 'react-router-dom';
+
 
 const Detail = () => {
+    const {id} = useParams();
     const [product, setProduct] = useState(null);
 
     const getProduct = new Promise((resolve, reject) => {
@@ -13,7 +16,7 @@ const Detail = () => {
                 descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
                 precio: 400
             })
-        }, 2000);
+        }, 500);
     });
 
     useEffect(() => {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './ProductCard.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,6 +34,7 @@ const ProductCard = ({titulo, precio}) => {
                 </div>
                 <p>${precio}</p>
                 <button onClick={onAdd}>Agregar al carrito</button>
+                <Link to='/detail/:id'>Ver mas</Link>
             </div>
            
         </article>
