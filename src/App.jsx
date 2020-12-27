@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './reset.css';
 import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
 //import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
@@ -14,7 +14,7 @@ import Error404 from './components/Error404';
 function App() {
  return (
     <>
-    <BrowserRouter>
+    <Router>
       <NavAndWidgetCart />
       <Switch>
         <Route exact path='/'>
@@ -31,7 +31,7 @@ function App() {
         </Route>
       </Switch>
       <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
-    </BrowserRouter>
+    </Router>
 
     </>
   );

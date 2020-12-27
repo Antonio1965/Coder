@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import ProductDetail from './ProductDetail';
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 
 const Detail = () => {
@@ -10,11 +10,11 @@ const Detail = () => {
     const getProduct = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
-                id: 1, 
+                id: id, 
                 nombre: "Producto de prueba",
                 foto: "http://placehold.it/350x400",
                 descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
-                precio: 400
+                precio: 1000
             })
         }, 500);
     });
