@@ -5,9 +5,10 @@ import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidget
 import Home from './components/Home';
 import Category from './components/Category';
 import Footer from './components/general/Nav/Footer';
-//import Main from './components/Home/Main';
 import Detail from './components/Detail';
 import Error404 from './components/Error404';
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 
 
 
@@ -25,6 +26,12 @@ function App() {
         </Route>
         <Route path='/detail/:id'>
           <Detail/>
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
         </Route>
         <Route path='*'>
           <Error404/>
