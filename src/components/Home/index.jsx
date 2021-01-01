@@ -1,4 +1,5 @@
-import FeaturedProducts from './FeaturedProducts/FeaturedProducts'
+import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
+import CategoriesGrid from './CategoriesGrid';
 import Slider from './Slider';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <>
         <Slider/>
         <FeaturedProducts />
+        <CategoriesGrid/>
         </>
     )
 }
