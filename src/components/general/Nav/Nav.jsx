@@ -1,41 +1,36 @@
 import './Nav.css';
 import NavItem from '../NavItem/NavItem';
 import NavCart from '../NavCart/NavCart';
+import {Link} from 'react-router-dom';
 
 function Nav({titulo, action}) {
     const menuItems = [
-        {
-            texto: 'Home',
-            ruta: '/category/home',
-        },
+        
         {
             texto: 'Celulares-Accesorios',
-            ruta: '/category/celulares-accesorios',
+            ruta: '/celulares-accesorios',
         },
         {
             texto: 'Tables-PC Escritorios',
-            ruta: '/category/tables-pc-escritorios',
+            ruta: '/tables-pc-escritorios',
         },
         {
             texto: 'Dispositivos Auxiliares',
-            ruta: '/category/dispositivos-auxiliares',
+            ruta: '/dispositivos-auxiliares',
         },
         {
             texto: 'Juegos Didácticos',
-            ruta: '/category/juegos-didacticos',
+            ruta: '/juegos-didacticos',
         },
-        {
-            texto: 'Otros',
-            ruta: '/category/otros',
-        },
+        
     ]
 
-    const qty = 0;
+    const qty = 1;
 
     return (
         <nav>
             <div className="container">
-                <h1>{titulo}</h1>
+                <h1><Link to="/">{titulo}</Link></h1>
 
                 <ul>
                     {
@@ -44,7 +39,7 @@ function Nav({titulo, action}) {
                 </ul>
                 
                 {
-                    !qty && <NavCart action={action} qty={qty} />
+                    !!qty && <NavCart action={action} qty={qty} />
                 }
             </div>
         </nav>
