@@ -5,11 +5,7 @@ const CategoriesGrid = () => {
     return (
         <section className="categories_grid">
             <div className="container">
-                <div className="item">
-                    <Link to="">
-                        Home  
-                    </Link>
-                </div>
+                
                 <div className="item">
                     <Link to="">
                         Celulares y accesorios  
@@ -30,11 +26,7 @@ const CategoriesGrid = () => {
                         Juegos Didacticos 
                     </Link>
                 </div>
-                <div className="item">
-                    <Link to="">
-                        Otros
-                    </Link>
-                </div>
+                
             </div>
         </section>
     )
