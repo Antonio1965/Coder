@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, memo} from 'react';
 import ProductCard from '../../general/ProductCard/ProductCard';
 import './FeaturedProducts.css';
 import {products} from '../../../products';
@@ -56,4 +56,4 @@ const FeaturedProducts = () => {
     )
 }
 
-export default FeaturedProducts;
+export default memo(FeaturedProducts);

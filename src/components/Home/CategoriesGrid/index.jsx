@@ -1,3 +1,4 @@
+import {memo} from 'react';
 import './CategoriesGrid.css';
 import {Link} from 'react-router-dom';
 
@@ -32,4 +33,4 @@ const CategoriesGrid = () => {
     )
 }
 
-export default CategoriesGrid;
+export default memo(CategoriesGrid);

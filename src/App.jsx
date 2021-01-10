@@ -9,17 +9,17 @@ import Detail from './components/Detail';
 import Error404 from './components/Error404';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-import {Store} from './store';
-import { useState } from 'react';
+import reducer from './reducer';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 function App() {
-  const [data, setData] = useState({
-    items:[],
-    cantidad:0,
-  })
+  
  return (
     
-    <Store.Provider value={[data, setData]}>
+    <Provider store={store}>
     <Router>
       <NavAndWidgetCart />
       <Switch>
@@ -44,7 +44,7 @@ function App() {
       </Switch>
       <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
     </Router>
-    </Store.Provider>
+    </Provider>
 
     
   );

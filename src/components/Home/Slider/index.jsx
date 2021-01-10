@@ -1,3 +1,4 @@
+import {memo} from 'react';
 import Imagen3 from '../../assets/imagen3.jpg';
 import Imagen4 from '../../assets/imagen4.jpg';
 import Imagen5 from '../../assets/imagen5.jpg';
@@ -36,4 +37,4 @@ function Main () {
     
     )
 }
-export default Main;
+export default memo(Main);
