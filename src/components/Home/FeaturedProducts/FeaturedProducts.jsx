@@ -1,23 +1,23 @@
 import {useState, useEffect, memo} from 'react';
 import ProductCard from '../../general/ProductCard/ProductCard';
 import './FeaturedProducts.css';
-import {products} from '../../../products';
+import {getFirestore} from '../../../db';
 
 const FeaturedProducts = () => {
     const [items, setItems] = useState([]);
+    const db = getFirestore();
+    
+     const getProducstFromDB =  () => {
+        db.collection('productos').where('outstanding', '==', true).get()
+        .then(docs => {
+            let arr = [];
+            docs.forEach(doc => {
+                arr.push({id: doc.id, data: doc.data()})
+            })
 
-    const getProducts = new Promise((resolve, reject) => {
-        const outstandingProducts = products.filter(item => item.outstanding);
-        resolve(outstandingProducts);
-    })
-
-    const getProducstFromDB = async () => {
-        try {
-            const result = await getProducts;
-            setItems(result);
-        } catch(error) {
-            alert('No podemos mostrar los productos en este momento');
-        }
+            setItems(arr);
+        })
+        .catch(e =>console.log(e));
     }
 
     useEffect(() => {
@@ -35,14 +35,14 @@ const FeaturedProducts = () => {
 
                         <ul>
                             {
-                                items.map((item, index) => (
-                                    <li key={index}>
+                                items.map((item) => (
+                                    <li key={item.div}>
                                         <ProductCard 
                                             id={item.id}
-                                            img={item.img}
-                                            titulo={item.title} 
-                                            precio={item.price} 
-                                            categoria={item.category}
+                                            img={item.data.img}
+                                            titulo={item.data.title} 
+                                            precio={item.data.price} 
+                                            categoria={item.data.category}
                                         />
                                     </li>
                                 ))
