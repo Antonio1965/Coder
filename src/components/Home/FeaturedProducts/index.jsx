@@ -6,9 +6,9 @@ import {getFirestore} from '../../../db';
 const FeaturedProducts = () => {
     const [items, setItems] = useState([]);
     const db = getFirestore();
-    
-     const getProducstFromDB =  () => {
-        db.collection('productos').where('outstanding', '==', true).get()
+
+    const getProducstFromDB = () => {
+        db.collection('productos').where("outstanding", "==", true).get()
         .then(docs => {
             let arr = [];
             docs.forEach(doc => {
@@ -17,12 +17,12 @@ const FeaturedProducts = () => {
 
             setItems(arr);
         })
-        .catch(e =>console.log(e));
+        .catch(e => console.log(e));
+
     }
 
     useEffect(() => {
         getProducstFromDB();
-        
     }, [])
 
     return (
@@ -36,7 +36,7 @@ const FeaturedProducts = () => {
                         <ul>
                             {
                                 items.map((item) => (
-                                    <li key={item.div}>
+                                    <li key={item.id}>
                                         <ProductCard 
                                             id={item.id}
                                             img={item.data.img}

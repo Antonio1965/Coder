@@ -1,27 +1,28 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useState } from 'react';
 import './reset.css';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
-//import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
 import Home from './components/Home';
 import Category from './components/Category';
-import Footer from './components/general/Nav/Footer';
 import Detail from './components/Detail';
-import Error404 from './components/Error404';
+import Error404 from './components/general/Error404';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-import reducer from './reducer';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
-
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import Footer from './components/general/Nav/Footer';
+import {Store} from './store';
 
 function App() {
-  
- return (
-    
-    <Provider store={store}>
-    <Router>
+  const [data, setData] = useState({
+    items: [],
+    cantidad: 0,
+    precioTotal: 0,
+  })
+
+  return (
+    <Store.Provider value={[data, setData]}>
+      <Router>
       <NavAndWidgetCart />
+
       <Switch>
         <Route exact path='/'>
           <Home/>
@@ -42,11 +43,11 @@ function App() {
           <Error404/>
         </Route>
       </Switch>
-      <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
-    </Router>
-    </Provider>
 
+      <Footer pieDePagina='Copyright © 2020-2021 TecnoAdult S.R.L.'/>
+      </Router>
+      </Store.Provider>
     
   );
 }
-export default App;
+export default App ;

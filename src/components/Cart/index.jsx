@@ -1,23 +1,39 @@
-import {useSelector} from 'react-redux';
+import {useContext} from 'react';
+import {Store} from '../../store';
+import './Cart.css';
+import {Link} from 'react-router-dom';
 
 const Cart = () => {
-    const items = useSelector (state => state.items);
-    
+    const [data, setData] = useContext(Store);
+
+    console.log(data);
 
     return (
-        <>
-        <h1 className='container'>Estás en el cart</h1>
-        {
-            items.map(item => (
-                <>
-                    <h2>{item.item.title}</h2>
-                    <p>{item.cantidad}</p>
-                    <p>{item.item.price}</p>
-                    <button onClick={items} className='btn-danger'>Eliminar</button>
-                </>
-            ))
-        }
-        </>
+        <section className="cart">
+            <h1>Cart</h1>
+
+            <ul>
+                {
+                    data.items.map(item => (
+                        <li>
+                            <img src={`/products/${item.item.img}`} alt=""/>
+                            <div>
+                                <h2>{item.item.title}</h2>
+                                <p>Cantidad: {item.cantidad}</p>
+                                <p>Precio por unidad: <strong>${item.item.price}</strong></p>
+                                <p>Precio total: <strong>${item.item.price * item.cantidad}</strong></p>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
+
+            <div className="final">
+                <p>Precio total: {data.precioTotal}</p>
+
+                <Link to="/checkout">Finalizar compra</Link>
+            </div>
+        </section>
     )
 }
 

@@ -1,14 +1,15 @@
+import {useContext} from 'react';
 import './NavCart.css';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
-import {useSelector} from 'react-redux';
+import {Store} from '../../../store';
 
 const NavCart = ({action}) => {
-    const qty = useSelector (state => state.cantidad);
+    const [data, setData] = useContext(Store);
 
     return (
         <div className="navCart" onClick={action}>
             <AiOutlineShoppingCart />
-            <span>{qty}</span>
+            <span>{data.cantidad}</span>
         </div>
     )
 }

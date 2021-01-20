@@ -1,13 +1,14 @@
+import {useContext} from 'react';
 import './WidgetCart.css';
-import {useSelector} from 'react-redux';
+import {Store} from '../../../store';
 
 const WidgetCart = ({show, action}) => {
-    const items = useSelector(state => state.items);
+    const [data, setData] = useContext(Store);
 
     return (
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
             {
-                items.map(item => <p>{item.item.title}</p>)
+                data.items.map(item => <p>{item.title}</p>)
             }
             <button onClick={action}>Cerrar widget</button>
         </div>

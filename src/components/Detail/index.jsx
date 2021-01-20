@@ -2,8 +2,8 @@ import {useEffect, useState} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import Comments from './Comments';
-import {getFirestore} from '../../db';
 import './Detail.css';
+import {getFirestore} from '../../db';
 
 const Detail = () => {
     const {id} = useParams();
@@ -17,7 +17,7 @@ const Detail = () => {
                 setProduct(doc.data());
             }
         })
-        .catch(error => console.log(error));
+        .catch(e => console.log(e));
     }, []);
 
     return (

@@ -1,12 +1,12 @@
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import './ProductDetail.css';
+import {Store} from '../../store';
 import {useHistory} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
 
 
 const ProductDetail = ({item}) => {
-    const dispatch = useDispatch();
     const history = useHistory();
+    const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);	
 
     const handleClickResta = () => {	
@@ -14,18 +14,22 @@ const ProductDetail = ({item}) => {
             setQty(qty - 1);	
         }	
     }	
+
     const onAdd = () => {
-        dispatch({type: 'SUMAR_ITEMS_CONTADOR', payload: qty})
-        dispatch({type: 'AGREGAR_ITEM', payload: {item, cantidad: qty}})
-        history.push('/cart');
-       	
+        setData({
+            ...data, 
+            cantidad: data.cantidad + qty,
+            items: [...data.items, {item: item, cantidad: qty}],
+            precioTotal: data.precioTotal + (item.price * qty)
+        });
+        history.push('/cart');	
     }
     
 
     return (
         <article className="product">
             <div className="foto">
-                <img src="http://placehold.it/400x400" alt=""/>
+                 <img src={`/products/${item.img}`} alt=""/>
             </div>
 
             <div className="info">
@@ -40,7 +44,7 @@ const ProductDetail = ({item}) => {
                         disabled={qty === 1 ? 'disabled' : null } 	
                         onClick={handleClickResta}	
                     >	
-                        -	
+                        	
                     </button>	
                     <input type="text" value={qty} readOnly/>	
                     <button onClick={() => setQty(qty + 1)}>+</button>	

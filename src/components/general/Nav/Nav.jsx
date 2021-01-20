@@ -22,15 +22,14 @@ function Nav({titulo, action}) {
             texto: 'Juegos Didácticos',
             ruta: '/juegos-didacticos',
         },
-        
+       
     ]
 
-    const qty = 1;
 
     return (
         <nav>
             <div className="container">
-                <h1><Link to="/">{titulo}</Link></h1>
+            <h1><Link to="/">{titulo}</Link></h1>   
 
                 <ul>
                     {
@@ -39,7 +38,7 @@ function Nav({titulo, action}) {
                 </ul>
                 
                 {
-                    !!qty && <NavCart action={action} qty={qty} />
+                    <NavCart action={action}/>
                 }
             </div>
         </nav>
