@@ -1,13 +1,15 @@
-import {useState,useContext} from 'react';
+import {useState,useContext, useEffect} from 'react';
 import './ProductDetail.css';
 import {Store} from '../../store';
 import {useHistory} from 'react-router-dom';
+import {getFirestore} from '../../db';
 
 
 const ProductDetail = ({item}) => {
     const history = useHistory();
     const [data, setData] = useContext(Store);
-    const [qty, setQty] = useState(1);	
+    const [qty, setQty] = useState(1);
+    const db = getFirestore();	
 
     const handleClickResta = () => {	
         if(qty > 1) {	
@@ -24,6 +26,16 @@ const ProductDetail = ({item}) => {
         });
         history.push('/cart');	
     }
+
+
+    
+    const handleUpdatePrice = () => {
+    db.collection('productos').doc(item.id).update({
+        price: 100,
+    })
+    .then(() => console.log('Se actualizó correctamente'))
+    .catch(error => console.log(error));
+}
     
 
     return (
@@ -51,6 +63,7 @@ const ProductDetail = ({item}) => {
                 </div>
 
                 <button className="btn" onClick={onAdd}>Agregar al carrito</button>
+                <button className="btn" onClick={handleUpdatePrice}>Actualizar precio</button>
             </div>
         </article>
     )

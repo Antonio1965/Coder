@@ -18,6 +18,7 @@ const Checkout = () => {
                     
                     <button>Pagar</button>
                 </form>
+                
             </div>
         </section>
     )
