@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 const Cart = () => {
     const [data, setData] = useContext(Store);
     const [prods, setProds] = useState([]);
+    
+
 
     useEffect(() => {
         if(data.items.length) {
@@ -37,7 +39,14 @@ const Cart = () => {
                                 <p>Cantidad: {item.cantidad}</p>
                                 <p>Precio por unidad: <strong>${item.item.price}</strong></p>
                                 <p>Precio total: <strong>${item.item.price * item.cantidad}</strong></p>
+                                <button
+                                    className='btn-danger'
+                                >
+                                    ELIMINAR
+                                </button>
+                                
                             </div>
+                            
                         </li>
                     ))
                 }
@@ -47,6 +56,7 @@ const Cart = () => {
                 <p>Precio total: {data.precioTotal}</p>
 
                 <Link to="/checkout">Finalizar compra</Link>
+               
             </div>
         </section>
     )
