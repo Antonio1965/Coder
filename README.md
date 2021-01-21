@@ -1,6 +1,6 @@
 # Introduccion a la aplicacion Create React.
 
-Este proyecto se inicio con [(https://github.com/facebook/create-react-app).
+Este proyecto se inicio con [(https://github.com/Antonio1965/create-react-app).
 
 ## Scripts disponibles
 
@@ -14,4 +14,4 @@ Abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 La pagina se volverá a cargar si realiza modificaciones.\
 También vera cualquier error de codigo en la consola.
 
-)
+
