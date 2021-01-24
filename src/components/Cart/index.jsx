@@ -6,9 +6,14 @@ import {Link} from 'react-router-dom';
 const Cart = () => {
     const [data, setData] = useContext(Store);
     const [prods, setProds] = useState([]);
+
+    const eliminarProducto = prodId => {
+        const productoEliminar =
+        data.items.filter(item =>
+            item.item.id !== prodId)
+            setProds(productoEliminar)
+    }
     
-
-
     useEffect(() => {
         if(data.items.length) {
             const productos = JSON.stringify(data.items);
@@ -36,11 +41,13 @@ const Cart = () => {
                             <img src={`/products/${item.item.img}`} alt=""/>
                             <div>
                                 <h2>{item.item.title}</h2>
+                                <p>{item.item.description}</p>
                                 <p>Cantidad: {item.cantidad}</p>
                                 <p>Precio por unidad: <strong>${item.item.price}</strong></p>
                                 <p>Precio total: <strong>${item.item.price * item.cantidad}</strong></p>
                                 <button
                                     className='btn-danger'
+                                    onClick={() => eliminarProducto(item.item.id)}
                                 >
                                     ELIMINAR
                                 </button>

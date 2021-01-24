@@ -5,9 +5,6 @@ export const products = [
     "title": "Celular teclado grande para adultos",
     "description": "",
     "img": "celu2.jpg",
-    "size": [
-      "m"
-    ],
     "price": 13000,
     "outstanding": "",
     "discount": ""
@@ -18,10 +15,6 @@ export const products = [
     "title": "Celulares Teclado especial",
     "description": "",
     "img": "celu1.jpg",
-    "size": [
-      "s",
-      "m"
-    ],
     "price": 16350,
     "outstanding": "",
     "discount": 15
@@ -31,7 +24,7 @@ export const products = [
     "category": "celulares-accesorios",
     "title": "Celulares con iconos grande",
     "description": "",
-    "img": "/src/assets/products/celu3.jpg",
+    "img": "celu3.jpg",
     "size": "",
     "price": 14170,
     "outstanding": true,
@@ -42,14 +35,7 @@ export const products = [
     "category": "celulares-accesorios",
     "title": "Celulares para mayores de 60 años",
     "description": "",
-    "img": "cule3.jpg",
-    "size": [
-      "s",
-      "m",
-      "l",
-      "xl",
-      "xxl"
-    ],
+    "img": "celu3.jpg",
     "price": 15590,
     "outstanding": "",
     "discount": 20
@@ -60,7 +46,6 @@ export const products = [
     "title": "Celulares adaptado para mayores.",
     "description": "",
     "img": "celu4.jpg",
-    "size": "",
     "price": 13400,
     "outstanding": "",
     "discount": 15
@@ -71,9 +56,6 @@ export const products = [
     "title": "Celulares facil de usar",
     "description": "",
     "img": "celu5.jpg",
-    "size": [
-      "s"
-    ],
     "price": 15900,
     "outstanding": "",
     "discount": 15
@@ -84,10 +66,6 @@ export const products = [
     "title": "Celulares accesos al adulto mayor",
     "description": "",
     "img": "celu6.jpg",
-    "size": [
-      "s",
-      "m"
-    ],
     "price": 13610,
     "outstanding": "",
     "discount": ""
@@ -98,9 +76,6 @@ export const products = [
     "title": "Celulares XXX",
     "description": "",
     "img": "celu7.jpg",
-    "size": [
-      "xl"
-    ],
     "price": 19000,
     "outstanding": "",
     "discount": 20
@@ -111,9 +86,6 @@ export const products = [
     "title": "Tables diseñado para adultos ",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores tenetur facere nostrum autem rem mollitia sequi labore assumenda minima esse maxime debitis cum optio delectus, consequuntur reiciendis, tempora in.",
     "img": "table4.jpg",
-    "size": [
-      "el más grande"
-    ],
     "price": 23450,
     "outstanding": true,
     "discount": ""
@@ -124,7 +96,6 @@ export const products = [
     "title": "Tables especiales para Adultos",
     "description": "",
     "img": "table4.jpg",
-    "size": "",
     "price": 21640,
     "outstanding": "",
     "discount": ""
@@ -135,12 +106,6 @@ export const products = [
     "title": "Tables de facil manejo para adultos",
     "description": "",
     "img": "table5.jpg",
-    "size": [
-      "chico",
-      "mediano",
-      "grande",
-      "extra grande"
-    ],
     "price": 17850,
     "outstanding": "",
     "discount": ""
@@ -151,7 +116,6 @@ export const products = [
     "title": "Pc de escritorios para adultos",
     "description": "",
     "img": "table6.jpg",
-    "size": "",
     "price": 23370,
     "outstanding": "",
     "discount": ""
@@ -162,7 +126,6 @@ export const products = [
     "title": "PC especiales para adultos",
     "description": "",
     "img": "table7.jpg",
-    "size": "",
     "price": 22850,
     "outstanding": "",
     "discount": ""
@@ -173,11 +136,6 @@ export const products = [
     "title": "PC escritorios adaptado para mayores",
     "description": "",
     "img": "pc1.jpg",
-    "size": [
-      "chico",
-      "mediano",
-      "grande"
-    ],
     "price": 23340,
     "outstanding": true,
     "discount": 30
@@ -188,7 +146,6 @@ export const products = [
     "title": "Tables XXX",
     "description": "",
     "img": "table8.jpg",
-    "size": "",
     "price": 31870,
     "outstanding": "",
     "discount": ""
@@ -199,7 +156,6 @@ export const products = [
     "title": "Tables YYY",
     "description": "",
     "img": "table9.jpg",
-    "size": "",
     "price": 25540,
     "outstanding": "",
     "discount": ""
@@ -210,7 +166,6 @@ export const products = [
     "title": "PC XXX",
     "description": "",
     "img": "table10.jpg",
-    "size": "",
     "price": 31180,
     "outstanding": "",
     "discount": ""
@@ -218,13 +173,9 @@ export const products = [
   {
     "id": 18,
     "category": "dispositivos-auxiliares",
-    "title": "Dispositivos para Audio",
+    "title": "Dispositivos para Audio y lectura en 3D",
     "description": "",
     "img": "aux1.jpg",
-    "size": [
-      "s",
-      "m"
-    ],
     "price": 6690,
     "outstanding": "",
     "discount": ""
@@ -235,7 +186,6 @@ export const products = [
     "title": "Potenciometro para audio",
     "description": "",
     "img": "aux2.jpg",
-    "size": "",
     "price": 5040,
     "outstanding": "",
     "discount": 15
@@ -245,8 +195,7 @@ export const products = [
     "category": "dispositivos-auxiliares",
     "title": "Sensor Qr para deteccion EMG",
     "description": "",
-    "img": "aux3.jpg",
-    "size": "",
+    "img": "aux29.jpg",
     "price": 5760,
     "outstanding": "",
     "discount": ""
@@ -256,10 +205,7 @@ export const products = [
     "category": "dispositivos-auxiliares",
     "title": "Sensor codigo QR para detectar desorientaciones.",
     "description": "",
-    "img": "aux4.jpg",
-    "size": [
-      "m"
-    ],
+    "img": "aux24.jpg",
     "price": 5150,
     "outstanding": "",
     "discount": 15
@@ -269,12 +215,7 @@ export const products = [
     "category": "dispositivos-auxiliares",
     "title": "Bastones con sensores sonoras",
     "description": "",
-    "img": "aux5.jpg",
-    "size": [
-      "s",
-      "m",
-      "l"
-    ],
+    "img": "aux4.jpg",
     "price": 8090,
     "outstanding": "",
     "discount": ""
@@ -285,13 +226,6 @@ export const products = [
     "title": "Reloj multifucion para la salud",
     "description": "",
     "img": "aux30.jpg",
-    "size": [
-      "xs",
-      "s",
-      "m",
-      "l",
-      "xl"
-    ],
     "price": 13740,
     "outstanding": true,
     "discount": ""
@@ -299,13 +233,9 @@ export const products = [
   {
     "id": 24,
     "category": "dispositivos-auxiliares",
-    "title": "Aparatos para medir presion ",
+    "title": "Aparatos para audio para adultos ",
     "description": "",
     "img": "aux6.jpg",
-    "size": [
-      "s",
-      "m"
-    ],
     "price": 12860,
     "outstanding": "",
     "discount": 30
@@ -313,12 +243,9 @@ export const products = [
   {
     "id": 25,
     "category": "dispositivos-auxiliares",
-    "title": "Lentes especiales con regulacion de enfoque.",
+    "title": "Lentes especiales con regulacion de enfoque 3D.",
     "description": "",
-    "img": "aux7.jpg",
-    "size": [
-      "l"
-    ],
+    "img": "aux10.jpg",
     "price": 12660,
     "outstanding": "",
     "discount": ""
@@ -328,8 +255,7 @@ export const products = [
     "category": "juegos-didacticos",
     "title": "Games para adulto mayor",
     "description": "",
-    "img": "did1.jpg",
-    "size": "",
+    "img": "did12.webp",
     "price": 12110,
     "outstanding": "",
     "discount": ""
@@ -340,7 +266,6 @@ export const products = [
     "title": "Juegos para ejercitar memorias.",
     "description": "",
     "img": "did2.jpg",
-    "size": "",
     "price": 13980,
     "outstanding": "",
     "discount": 10
@@ -351,7 +276,6 @@ export const products = [
     "title": "Tableros electronicos de juegos",
     "description": "",
     "img": "did3.jpg",
-    "size": "",
     "price": 21730,
     "outstanding": "",
     "discount": ""
@@ -361,8 +285,7 @@ export const products = [
     "category": "juegos-didacticos",
     "title": "Celulares con juegos para memorias.",
     "description": "",
-    "img": "did4.jpg",
-    "size": "",
+    "img": "did11.webp",
     "price": 21280,
     "outstanding": "",
     "discount": ""
@@ -372,8 +295,7 @@ export const products = [
     "category": "juegos-didacticos",
     "title": "Juegos XXX",
     "description": "",
-    "img": "did5.jpg",
-    "size": "",
+    "img": "did12.webp",
     "price": 21430,
     "outstanding": "",
     "discount": ""
@@ -384,7 +306,6 @@ export const products = [
     "title": "Juegos YYY",
     "description": "",
     "img": "did6.jpg",
-    "size": "",
     "price": 21430,
     "outstanding": "",
     "discount": ""
@@ -394,12 +315,7 @@ export const products = [
     "category": "juegos-didacticos",
     "title": "Juegos XXX",
     "description": "",
-    "img": "did7.jpj",
-    "size": [
-      "chico",
-      "mediano",
-      "grande"
-    ],
+    "img": "did14.webp",
     "price": 21430,
     "outstanding": "",
     "discount": 30
@@ -409,8 +325,7 @@ export const products = [
     "category": "juegos-didacticos",
     "title": "Juegos YYY",
     "description": "",
-    "img": "did8.jpj",
-    "size": "",
+    "img": "pc1.jpg",
     "price": 21370,
     "outstanding": "",
     "discount": ""
@@ -420,8 +335,7 @@ export const products = [
     "category": "juegos-didacticos",
     "title": "Juegos XXX",
     "description": "",
-    "img": "did9.jpg",
-    "size": "",
+    "img": "did4.jpg",
     "price": 21920,
     "outstanding": "",
     "discount": 10
@@ -432,7 +346,6 @@ export const products = [
     "title": "Juegos YYY",
     "description": "",
     "img": "did1.jpg",
-    "size": "",
     "price": 21340,
     "outstanding": "",
     "discount": ""
