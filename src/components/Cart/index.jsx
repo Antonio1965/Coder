@@ -11,7 +11,7 @@ const Cart = () => {
         const productoEliminar =
         data.items.filter(item =>
             item.item.id !== prodId)
-            setProds(productoEliminar)
+            setData({...data, items:productoEliminar})
     }
     
     useEffect(() => {
@@ -45,12 +45,14 @@ const Cart = () => {
                                 <p>Cantidad: {item.cantidad}</p>
                                 <p>Precio por unidad: <strong>${item.item.price}</strong></p>
                                 <p>Precio total: <strong>${item.item.price * item.cantidad}</strong></p>
+                                <div>
                                 <button
                                     className='btn-danger'
                                     onClick={() => eliminarProducto(item.item.id)}
                                 >
                                     ELIMINAR
                                 </button>
+                                </div>
                                 
                             </div>
                             
