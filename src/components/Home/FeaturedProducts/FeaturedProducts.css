@@ -12,13 +12,26 @@
 .featuredProducts ul {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .featuredProducts ul li {
   width: 20%;
+  margin-left: 1px;
+  margin-bottom: 20px;
 }
 
 .cargando {
   text-align: center;
   font-size: 3rem;
+}
+.contenedor-imagen {
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-imagen img {
+  height: 100%;
 }
