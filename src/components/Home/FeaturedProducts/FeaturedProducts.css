@@ -31,6 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .contenedor-imagen img {
   height: 100%;

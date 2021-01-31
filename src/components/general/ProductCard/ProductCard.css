@@ -29,6 +29,8 @@
   color: var(--text);
   font-size: 2.1rem;
   margin-bottom: 1rem;
+  word-break: break-word;
+  width: 100%;
 }
 
 .productCard div p {
