@@ -26,17 +26,7 @@ const ProductDetail = ({item}) => {
         });
         history.push('/cart');	
     }
-
-
-    
-    const handleUpdatePrice = () => {
-    db.collection('productos').doc(item.id).update({
-        price: 100,
-    })
-    .then(() => console.log('Se actualizó correctamente'))
-    .catch(error => console.log(error));
-}
-    
+   
 
     return (
         <article className="product">
@@ -63,7 +53,7 @@ const ProductDetail = ({item}) => {
                 </div>
 
                 <button className="btn" onClick={onAdd}>Agregar al carrito</button>
-                <button className="btn" onClick={handleUpdatePrice}>Actualizar precio</button>
+                
             </div>
         </article>
     )

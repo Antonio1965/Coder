@@ -3,7 +3,7 @@ import {Store} from '../../store';
 import './Checkout.css';
 import {getFirestore} from '../../db';
 import firebase from 'firebase/app';
-//import MercadoPago from '../MercadoPago';
+import MercadoPago from '../MercadoPago';
 
 const Checkout = () => {
     const db = getFirestore();
