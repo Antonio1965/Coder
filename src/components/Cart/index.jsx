@@ -11,7 +11,13 @@ const Cart = () => {
         const productoEliminar =
         data.items.filter(item =>
             item.item.id !== prodId)
-            setData({...data, items:productoEliminar})
+            const item = data.items.find(element => {
+                return element.item.id === prodId
+            })
+            const resultado={...data, items:productoEliminar, precioTotal: data.precioTotal - (item.item.price * item.cantidad)}
+            console.log({resultado});
+        console.log(item);
+            setData(resultado)
     }
     
     useEffect(() => {
