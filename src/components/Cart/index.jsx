@@ -70,7 +70,7 @@ const Cart = () => {
             <div className="final">
                 <p>Precio total: {data.precioTotal}</p>
 
-                <Link to="/checkout">Finalizar compra</Link>
+                <Link to="../MercadoPago">Finalizar compra</Link>
                
             </div>
         </section>

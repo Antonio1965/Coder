@@ -27,6 +27,16 @@ const CategoriesGrid = () => {
                         Juegos Didacticos 
                     </Link>
                 </div>
+                <div className="item">
+                    <Link to="">
+                        Home 
+                    </Link>
+                </div>
+                <div className="item">
+                    <Link to="">
+                        Otros 
+                    </Link>
+                </div>
                 
             </div>
         </section>
