@@ -54,8 +54,11 @@ const Checkout = () => {
                         
                         <button>Pagar</button>
                     </form> :
-                    
+                    <>
                     <p>La compra se realizó correctamente, tu número de seguimiento es: {idCompra}</p>
+                    <MercadoPago/>
+                    </>
+
                 }
             </div>
         </section>

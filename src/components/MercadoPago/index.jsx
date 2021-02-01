@@ -1,9 +1,10 @@
+import './MercadoPago.css';
 
-const MercadoPago = () => {
+const MercadoPago = () => (
     <>
-    <div className='container'></div>
+    <div className='mercadopago'></div>
     <h1 className='mercadopago'>Va a la pagina De Mercado Pago</h1>
     </>
-}
+)
 
 export default MercadoPago;

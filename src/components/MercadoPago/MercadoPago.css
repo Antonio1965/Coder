@@ -2,8 +2,8 @@
   padding: 2rem 0;
 }
 
-.mercadopago h2 {
+.mercadopago h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 10rem;
   color: var(--color-secundario);
 }

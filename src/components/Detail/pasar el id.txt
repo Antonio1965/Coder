@@ -1,0 +1,30 @@
+pasar el id
+como param
+a la func
+onAdd
+
+recorrer 
+items
+y preg
+si existe
+el mismo id
+
+si existe 
+obtenes el
+indice del
+elemento
+
+desp con ese
+indice actualiza
+el item del array
+
+buscar
+actualizar valor
+de un objeto
+en js
+
+buscar
+actualizar valor
+de un objeto
+en un array
+en js

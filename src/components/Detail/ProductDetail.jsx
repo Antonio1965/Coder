@@ -18,6 +18,7 @@ const ProductDetail = ({item}) => {
     }	
 
     const onAdd = () => {
+        console.log(item);
         setData({
             ...data, 
             cantidad: data.cantidad + qty,
@@ -26,6 +27,8 @@ const ProductDetail = ({item}) => {
         });
         history.push('/cart');	
     }
+
+
    
 
     return (
