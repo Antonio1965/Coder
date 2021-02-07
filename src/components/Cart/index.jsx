@@ -53,7 +53,7 @@ const Cart = () => {
                                 <p>Precio total: <strong>${item.item.price * item.cantidad}</strong></p>
                                 <div>
                                 <button
-                                    className='btn-danger'
+                                    className='btn-warning'
                                     onClick={() => eliminarProducto(item.item.id)}
                                 >
                                     ELIMINAR
