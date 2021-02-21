@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import FeaturedProducts from './FeaturedProducts';
 import Slider from './Slider';
-import CategoriesGrid from './CategoriesGrid';
+//import CategoriesGrid from './CategoriesGrid';
 import Newsletter from './Newsletter';
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
         <>
         <Slider/>
         <FeaturedProducts/>
-        <CategoriesGrid/>
+        
         <Newsletter/>
         </>
     )
